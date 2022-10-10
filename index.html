@@ -1,6 +1,60 @@
-<!DOCTYPE html> 
-<html> 
-<body>
-    <script type="module" src="./scripts/main.js"></script>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles/main.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Lobster+Two&family=Poppins&family=Silkscreen&display=swap"
+        rel="stylesheet">
+    <title>Martin's Aquarium</title>
+</head>
+<main class="main">
+
+    <body>
+        <h1 class="header">Martin's Aquarium</h1>
+        <section class="quote left">
+            <h5>"Just one more fish, I promise"</h5>
+        </section>
+        <section class="split left centered">
+            <h3>List of Fish</h3>
+            <ul>
+                <h4>Fish1</h4>
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAACuCAMAAAClZfCTAAAAgVBMVEX///9ISEhFRUVBQUE+Pj48PDz8/Pz19fXv7+83Nzfs7Ozo6OhJSUn5+flNTU3z8/Ph4eHFxcXT09PZ2dldXV2rq6tSUlKioqJnZ2fKysqUlJRaWlpiYmJwcHDe3t7W1ta2traIiIh6enq7u7uDg4MxMTGcnJx2dnaxsrIsLCxtbW51O4DtAAAQCElEQVR4nO1d6ZaqOBCWJICIrLKjtiwu4/s/4ACakEBAsL3gzOU7p3+INoSiUnsVq9WCBQsWLFiwYMGCBQsWLFiwYMGCBQsWLFiwYMGCBQsWLPjfQjI2hjb3Ir4Wsht4ggAAEATBO0S3H3OzEItFKlbUqQAAFMXtPvdDY+5lfREuitAEgEhRrpk699K+BJs9aJGoAkROtJt7dV8Be8unUMVMSpAtG2519Dq46EmlwJLmXuLckIM+EhVEUq7W3GucGwnsJVGp5SJz7kXOi0x8kmLrKWdFERFosRXysrlXOStkovTtlWyGp8t1D1CDSgBdN3Ovc0ZIWOvD0/PIxvb3SoNK0PmZc5Ezw0dPKqSU32H6AWSIBAgF/0JYT3kNHMYGWoeBCBga3eZa4exQ4yclxKYxHd5pTgLo76XR/UkH5De/kbOYMgkACOdY3jcACyNwbX+3TihGAsLfqvyPT7UP4jXn25BiJIDsyVf3FTB0zCjcjWQeUE0j7zj16r4CEvZBuuQx5aPA4O+MSN6wZZTzvXrjVvMRiiZe3HuQXU+/hp97nDscMwJyfXBt7kI3SvexDiEdUxIj2+TJrK+CkRauJoT556JdOGZ0xp7Yj5vcPVFBEIKWV4uQFyS+9dVhW/+hgZD3MTMlx8LILbjHdgOlIE7b4acMJIhEBSbWtwZJ5MNz8UC/fSgiaD0DIuCe5QEQ+4NstehGcep+ZXjbxA6DAJT8M1JBxSoLiHAgfZ7shM7O5fvsAONe3wUMPmLLEcZ8AwB5qfVtSYCI8ZvcT5zSR900eE0kqMT+d7FSqDDrS36tW4zMeZ+LnqvQ8+MXpUo0nbkh5PxOsWxcp1NAl8YFREgURVQA8mwAQiQh/yJOaiQtgO6+/wA3vsCX0KVi3zqHNIn8W3a6ua5/iZL8evdgl0iH8Gp/CydZjbwOQNG7S7Mczv0Wiko8e6kb7lS58XvNMO1T4pwVLp0gSL4kDbCJm8sT34q+S1astG+0MHeuF6tJmwaOtyjYcvYnRJfvIFLeSg8CfXy0S81bgqUQPSCxWrzDxdp074V0ahHJ+YoUN0kPUjeHknFm5CZq3R5Q4mScibPJ8nbSTQy+QG6veeUc8DBGs1lxk0BQOGSb0QygHS8eaJwK6tHsUSUpJYuiHiHcDt5sm7zx7AteSN411NfWFTWSbmg/e61EhkkUO4ypnQzjgsxpmA1wf1F/IUGkn8RrEEmYW7cd9edSkJvSckm8DhADRsTqMSB67q/dYdNvCCXkzMxI2O+E+epC6yUgvFxY2JBCKPYHabCVJK83qnk0O369uejMiQG6zOrdktxXvFmFZ2azXfpFpSuwD1scUD0kmeHJj5I0cHSoCNcuobVLzgyRYDBnzE3F9wkLrlkzmw3texamNhL1IOp1gjV1Z0UBVEofjThoUO+Mo/2kjEiCwi9co9+CRHhgUn5K6BuH3VLA3tOPGaC4L7Z7zKLU4QXZqmvyoWUeYq4wo/p3yUoq0WDRcgCcL1x5IbkMC0Hd73rGm9C/i6Ufxvdw9R7ekC8MTcX9bHmAH0wS5cEyxz399OCVtzAmQgDgoUP7GVnSLlRj2ah3+1gsq8azabaY3mkFpIjZbF5rYazEgnrGvU/TSl8GsEHQvzQjYpQs+khg9A1EWKc52EY7bRnt31Dlmzv9bPkspFm513ZM20z0MiMbMrYpuswjtMlOg0TkmjG92cSUtm/NgBZWCs8UUt39oAQI0F/r8jXD02ig1f9hrIPGTnssjH7YlBT4oe1FyPOgzEtH+BETpqb9oI3D+MnoQ9mskbhglgHUQReym+152KbbGMSg7T5prtchoMvwNVLOShATJhrmfe1onkb3OZS/jRMhCm3c7JjSOzGtRI5F8QAAbXOutGZ4BAJQBPE9j1xbWv3gy8Gh0tegI38omEP544eELvTRdUrnkKBXWMLhlqZQO2Kipm37B0CEFC+3drgMBDPtUCYqoPmUvwyDGfYaNnPAnl00u9ngJaM+VyRjIbnNkFhJnzi9WPRp1zjV1i4a7UFGbXAYTx+MDDEbwUZs3/YY202nl9lSRnLSlNIQ6ond7I8Nyel61ZlkmMc19a87aimwz3n8M1Cdtk57YH1td3NWHJC2hOYxYOPghVmdWpwtQcywa3fkRLJz/awoZ5Rn5EcqVSkJvclpRHaa1/xG87lprrb7+cNmdsvwo8nTPRIx5ruF9e6AzQYIgxM+alAmK5xcZpNECKfWN9NbVrLSliInhkJAjG8dUbAd0WedAoX1pEVigct5zdJwP3GUTSMk4ojQzaGZs20/fx8xgt1xOzcRDix0u2duQyuKRM9qF6qa9DCxXrvinXbnPBwtYipI/mkre6b/HAK3R5unuE+ka5+F7bRlbcLf/qlpdB95j79ERkwjLvtHtDnUDp75TKwy7ROlJlbe2+pXarJ3IpYd7q19DeKaJzOFutCk/hppj+YaKzeqM+GftrSiiqlL66nXQbDIPisJExa2OBDvtOgNOdpBofjWP5PDYv7ezb4JzP/AaX93o/sS2ixCU+ilxYIL4yqdqD5kPLpT7BBxytxgSl+OotGlefo/CZfslZbRHNZqH7S/ZWSH+LIcgPRjlS0QpMev3rsyKXMD2y0gz43mMyoIwfGB/hw2RKc1xahNz0ppSyrKHgLwtUtBosAlrbGColpGDLwO4JfxtOe5dcbq94k8AmjCWK1EarAPDVlyhfWC2nLI2FMUet2sqOFdci73Ft511GOp+7XKZfh4WzIqQqpD50CfsBmZSBSRtVvlWs2e2xTScspSGcD1OBAC9PITIVFN2x0hEUNDVotKCdlrMBiWAP4EdnVynzlOgkkC5JCA7p4a4rhjM/4hgInsPpEfGCS85xqy5XE3WvHc6oKW1+HvzwHvGMCaZCrZGqf2/5zGahcifSp6EhLVxJfJxkVxgLjiuoRRp48m7Ncmyf1GFvnpdvKYJKR4aNjDxFwnVmKWQ6LVpZYztZRr99rWc27qxM0fBxaUAjoxx20gAgDPHCY51jeB8kERZQlHWMVKrPFIxDMdRc7jIcW+oB25+lOQ70SnsYa94V+DlCOHKHsJxsN8AVJAsK04FW87Rspd2w7Innf2nLiV0wls0r4htmqk15w17iiDaGikdPPMRz2bh8kEjRP1G7tNIp7xYxKZNaGJbeOLKkNuOKzDH0AcWtyI56095a/bNh3Lo40Sbk50akXpUjRhAHJH1jTgojfa5h5ePMqS6MQlEZslgJCbpDaJKDoMvfgHQIxH9FL0Spda249xAhokwiGYptNzTGE1H6pQE8qVX7hEMmtTzrHR8FXhyziMRhfPjHElGyTCWqklTqRdFHi64DlRRwE/EYTAmzCITarUX86FsQ9UCE05jbgGEddPEpHEC4cQph1y8wMVSLPhpN3+FnGf+ht5pYyOnI6i0Gp9Z0iER0GC68g8/Q+xG/UpMyF1Srb3Z0xCESjjiqKMA6P0cZQW7MeZNjJJOMApg2oyzm/12xk/MROFHdngL18xeSu/1IgxxcZlfEh4YVJJVM8/VfoiMC6dLoPbsQEtDXvoz8gTGVA3KuFjEVE47dwRkt9yuplezWmr7p168YhxY1eYqQYZqxh1eQqYNN9Ioo49LrvNVByh6I1cXyMUSxz/EYaDVjdxTxmWLdQxySN3XdZkyvWB8FaY5oZDao+iAOKkjdgw0UzbbHXCwz666qJcJrUP9+/1nJGZInH1EQchR3gRVDzpPm0XVh1a4H59TJlyfSV9UwiomFnP1UcT22LO0PPVyaz2aMQ/C1JhJPL2j5Z5bITCfbskE99hlSRarXWs9QferkvVGI0pcvsASKwPcrSUkbAlnr+ZLoLVvHgqP9VhvGGCN6spJE5dgd1XOmY1WOhX0/RILDZiPg5rXTjVNQ9g8ml13aa1HHGKYN8PFxMB/ajSuZFHM4AnTlSMSph6LqSJwz/NfKuUbXnTdgBvPw67Eqnjq4x4EsZDL+W1FlExqu3kE1iJFETscZUtgqX81/hNhathE/WRSZOwQ6O8FEZ1dlEAA0XXJ4EvD5mKHe0msI2F1AsIwPZNB5Kk6x5VOiSO193fWOHHoSp4ZqAQ4X6R5l+TLcWHsUvXGgL9PWlAEuCPsmtisu572dKmDFfQSPRNAmLzUgVWsi+wrYtVe2NEP8v3VsoWFas4q9o73zmj9/jg1pFPgnA7mXsqhXu2w9nLHkqWphEc2JbP4kJCd6UbrA3YaesE0BSaZQ40Edb4+WxyVkwr9Zg1ulHtrcJeEph6uPc4USTALp0W0m0BM03KJt1Pz7Gnss9Wo7ONeXQxIuztPedDw0IfBCXPrkkOmL9/ZLak25vn/Q9EyWyrj/YdNViINYISqsj6nVGHpAT5IX4OxIHmsZHK1BiLwTwzRElAuTJV1Jyd2oWCloaNmFUfxmp/A0toWJnUpAKHU89cmPZMCObtSW+/hInNN1iocZdpHC6EI2+MccbEZ0e3zxMSlxesW3PBtnmp8ErXvIO5+qsp0yQwwj1TcgC6xqru6HEHQOwaZdCBI5mKXRUq3kixLhtFVNnRP+/IvU+BVKUfGh4rFDq7XdZXZiSENy6dRXyJKuazJlelc99axox6KLTnfMNnJEIWNugBUN6zKHYkBBD32YjgxA/5P1AKMpdUeZDcqpQFDX6ebZOtmIJFhoViq/empYztQAP34USSamlUFgASaVQI8IehFV4b/DzfuJASF160A4r+S1fedljJLt4Hz2FU2b1VtwdVxqidnNkopxLNOk7N4Lw/EMB0iIUmR1v2VsD+NNDc9uu9tSnnAtZVk/efvNGnDYOZX8+jtpkICbeBeyb0mi3DjjvITKont1a1tibdSNKY8TczC62YnMJzTdsRa5IvjbAtQCixBvx/3RQglv5rcx5w/bgO87/hqTEJvtBN4+JAVtycgAHRPuoX9SVqq6FMO0s5TyIKEETTVQx3QW1MBY9PY8+g+V6LEaGiBK7dy0x1CxLY2mXJUJtGhWn/De8IsRgDFoycwPuAGbUGYZQ7DgSpbxmdSm5HaFJFjtR7g0YAOq95cQqc6BDZ4V0/+tgeVlydECmKd41ulv1zNDdGdcOSpslr07b8qH5/BCrFkXZgHTJ9qM7406hJBOMxBnITparmdG9UhcEi3Ope7OyD++F+D4JgX76eiJm3W/WbyXXSF0D9e97Cu3tqJAh+O6TcjoSet8cAFo1vnxlO//FFwUHfQ6DVc04DAOkH5t1s3DtHKA0BDlxbOoJIjC9f9sIrFyrnT72lXA5zcdybdp5chKNpRz+/nL5BjbFY7z65pk2Wx2gkLwHwt725UbVSpKDBzFRYUXONtJwTUuim+85XodD8g1D89iD6/zq0zTHLnWpSIWwqMVC+Ow4WBIxT/+c3g+j/FyhngCfp3fGAUkIUiz/BC9LIP4Xm306cGpJmrDeqau7s0LJsU1WflvaCBQsWLFiwYMGCBQsWLFiwYMGCBQsWLFiwYMGCBQsW/AfwLwVJ1QQ33tpYAAAAAElFTkSuQmCC">
+                <li>fish species</li>
+                <li>fish length</li>
+                <li>fish name</li>
+                <li>harvest location</li>
+                <li>fish diet</li>
+            </ul>
+        </section>
+        <section class="information split right">
+            <div class="cleaning_information">
+                <h3>How to properly clean a fish tank?</h3>
+                <ol>
+                    <li>Step 1: Test water quality</li>
+                    <li>Remove algae</li>
+                    <li>Prune the plants</li>
+                    <li>Turn off equipment</li>
+                    <li>Vacuum the substrate</li>
+                    <li>Clean the filter</li>
+                    <li>Refill the water</li>
+                    <li>Turn on Equipment</li>
+                </ol>
+            </div>
+            <div class="temperature_information">
+                <h3>Fish Tank Temperature</h3>
+                <p>Most tank fish do well at temperatures from 75-80 degrees Fahrenheit (23-27 degrees Celsius), but the
+                    needs of specific fish can vary. If your tank is home to just one or two types of fish, it is best
+                    to
+                    investigate their preferred temperature range and take steps to keep your tank in the middle of that
+                    range.</p>
+            </div>
+        </section>
+</main>
+<script type="module" src="./scripts/main.js"></script>
 </body>
+
 </html>
